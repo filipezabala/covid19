@@ -1,7 +1,7 @@
 # covid19
 Some exercises with public covid19 databases.
 
-
+```{r}
 # covid19
 download.file('https://ti.saude.rs.gov.br/covid19/download', 'temp.csv', 
               mode =  'wb')
@@ -25,5 +25,5 @@ str(vac.apl)
 round(prop.table(tab2), 3)
 barplot(tab2, breaks = names(tab2), main = 'Vacinação por faixa etária',
         xlab = 'Faixa etária')
-        
+```
 ![](barplots.png)
