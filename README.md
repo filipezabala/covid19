@@ -1,7 +1,7 @@
 # covid19
 Some exercises with public covid19 databases.
 
-```{r}
+```r
 # covid19
 download.file('https://ti.saude.rs.gov.br/covid19/download', 'temp.csv', 
               mode =  'wb')
