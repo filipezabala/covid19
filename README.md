@@ -2,6 +2,10 @@
 Some exercises with public covid19 databases.
 
 ```r
+# working directory
+setwd(tempdir())
+getwd()
+
 # covid19
 download.file('https://ti.saude.rs.gov.br/covid19/download', 'temp.csv', 
               mode =  'wb')
@@ -11,8 +15,8 @@ head(c19)
 str(c19)
 (tab = table(c19$FAIXAETARIA))
 par(mfrow=c(1,2))
-barplot(tab, breaks = names(tab), main = 'Contaminados por faixa etária',
-        xlab = 'Faixa etária')
+barplot(tab, main = 'Contaminados por faixa etária', xlab = 'Faixa etária',
+        sub = paste0('(Atulalizado em ', Sys.time(), ')') )
 
 # vacina
 download.file('https://vacina.saude.rs.gov.br/api/aplicacao', 'temp.csv', 
@@ -23,7 +27,7 @@ head(vac.apl)
 str(vac.apl)
 (tab2 = table(vac.apl$FAIXAETARIA))
 round(prop.table(tab2), 3)
-barplot(tab2, breaks = names(tab2), main = 'Vacinação por faixa etária',
-        xlab = 'Faixa etária')
+barplot(tab2, main = 'Vacinação por faixa etária', xlab = 'Faixa etária',
+        sub = paste0('(Atulalizado em ', Sys.time(), ')') )
 ```
 ![](barplots.png)
