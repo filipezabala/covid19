@@ -30,4 +30,4 @@ round(prop.table(tab2), 3)
 barplot(tab2, main = 'Vacinação por faixa etária', xlab = 'Faixa etária',
         sub = paste0('(Atulalizado em ', Sys.time(), ')') )
 ```
-![](barplots.png)
+![](barplots2.png)
